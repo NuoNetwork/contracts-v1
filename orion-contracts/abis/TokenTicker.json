@@ -1,0 +1,165 @@
+{
+  "contractName": "TokenTicker",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tokenAddrToPrice",
+      "outputs": [
+        {
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "name": "relTokenAmt",
+          "type": "uint256"
+        },
+        {
+          "name": "valueInEth",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_tokenAddr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_oldRelTokenAmt",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_oldValueInEth",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_newRelTokenAmt",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_newValueInEth",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogPriceUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_tokenAddr",
+          "type": "address"
+        },
+        {
+          "name": "_relTokenAmt",
+          "type": "uint256"
+        },
+        {
+          "name": "_valueInEth",
+          "type": "uint256"
+        }
+      ],
+      "name": "updatePriceForToken",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenAddr",
+          "type": "address"
+        }
+      ],
+      "name": "getLatestPriceAndTimestampForToken",
+      "outputs": [
+        {
+          "name": "_relTokenAmt",
+          "type": "uint256"
+        },
+        {
+          "name": "_valueInEth",
+          "type": "uint256"
+        },
+        {
+          "name": "_timestamp",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-24T10:23:08.756Z"
+}
