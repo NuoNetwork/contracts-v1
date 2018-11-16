@@ -11,7 +11,6 @@
   "author": "Rohit Soni <rohit@nuofox.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "jquery": "^2.2.0",
     "truffle-hdwallet-provider": "0.0.5",
     "zeppelin-solidity": "1.8.0"
   }
